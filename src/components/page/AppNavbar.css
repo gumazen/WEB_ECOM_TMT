@@ -1,0 +1,12 @@
+.TextNavbar {
+  color: black;
+  font-size: 1.5rem;
+}
+.ImgLogoNavbar {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+}
+.Text_a_color > a {
+  color: black;
+}

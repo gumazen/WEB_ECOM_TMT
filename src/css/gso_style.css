@@ -1,0 +1,64 @@
+.setAlign > div {
+  text-align: left;
+  margin-left: 35%;
+  margin-bottom: 15px;
+}
+.setAlign > hr {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.setWidthControl {
+  display: inline-table;
+  width: 30%;
+}
+@media (max-width: 991px) {
+  .setAlign > div {
+    text-align: left;
+    margin-left: 10%;
+  }
+  .setAlign > hr {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .setWidthControl {
+    display: inline-table;
+    width: 80%;
+  }
+  .setAlignNavbarR {
+    text-align: right;
+    width: 100%;
+  }
+}
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #000;
+  line-height: 120px;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.boxCustom {
+  height: auto;
+  text-align: center;
+  margin-top: 5%;
+  border-style: solid;
+  border-width: 3px;
+  padding: 50px;
+}
+@media (min-width: 910px) {
+  .boxCustom {
+    height: auto;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    margin-top: 5%;
+    border-style: solid;
+    border-width: 3px;
+    padding: 50px;
+  }
+}

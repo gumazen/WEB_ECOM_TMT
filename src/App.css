@@ -1,38 +1,231 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-size: 100%;
+  /* background-image: url(asset/bg.png); */
+  /* text-align: center; */
   min-height: 100vh;
+
+  /* padding-bottom: 68px; */
+}
+
+* {
+  font-family: "supermarket";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.catalog-image {
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.product-title,
+a .product-title,
+a .product-link {
+  margin-bottom: 0;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.product-price {
+  color: coral;
+}
+
+.page-selecter {
+  display: flex;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.page-selecter button {
+  line-height: normal;
+  border: 0;
+  background-color: white;
+}
+
+.page-selecter button img {
+  width: 24px;
+}
+.page-selecter button {
+  padding: 5px 20px;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+.page-selecter button:disabled {
+  background-color: grey;
+}
+.page-selecter button:first-of-type {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-left: none;
+}
+.page-selecter button:last-of-type {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-right: none;
+}
+
+.page-selecter select {
+  border: none;
+  padding: 5px 30px;
+}
+
+.page-selecter select option {
+  border: none;
+  padding: 0;
+}
+/** ************************************************************/
+/*  Product Filter Bar */
+/** ************************************************************/
+
+.product-filter-bar {
+  width: 100%;
+  /* background-image: url("asset/product_filter.png"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.product-filter-text {
+  font-size: 3.75rem;
+  font-weight: 300;
+  color: #5e4a2d;
+  letter-spacing: 0.05rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+  text-align: center;
+}
+.product-filter-container {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.product-filter-container > * {
+  margin-left: 8px;
+}
+.product-filter-container label {
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.product-filter select {
+  border-radius: 0;
+  border-color: #5e4a2d;
+  color: #5e4a2d;
+  border-width: 2px;
+  font-size: 1.2rem;
+  padding: 0.2rem 5rem;
+}
+@media (max-width: 991px) {
+  .product-filter-bar {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .product-filter-container {
+    flex-direction: row;
+  }
+
+  .product-filter-text {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .product-filter-container > * {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .product-filter select {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.2rem 2rem;
+  }
+  .product-filter {
+    width: 50%;
+    padding: 3px;
+  }
+  .product-filter-container label {
+    width: 100%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/** ************************************************************/
+/*   Login form      **/
+/** ************************************************************/
+
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container form {
+  /* min-width: 500px; */
+  background-color: white;
+  border-radius: 30px;
+  border: 3px solid var(--color-main);
+
+  padding: 60px 10%;
+}
+
+.login-container form .icon {
+  display: flex;
+  justify-content: center;
+}
+
+.login-container form .icon img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+}
+
+.login-container form .login-input {
+  background-color: var(--color-main-light);
+  border-radius: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.login-container form .group {
+  display: flex;
+  align-items: stretch;
+}
+
+.login-container form .input-icon {
+  background-color: var(--color-main);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+}
+.login-container form .input-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.login-container form button[type="submit"] {
+  width: 100%;
+  border: none;
+  background-color: var(--color-main);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  margin-top: 3rem;
 }
